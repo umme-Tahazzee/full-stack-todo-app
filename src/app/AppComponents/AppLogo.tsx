@@ -3,10 +3,10 @@ import { FaCheckDouble } from "react-icons/fa6"
 
 const AppLogo = () => {
 
-  return (
+ return (
   <div className="flex gap-2 items-center mb-11 
   justify-center " >
-   <div className="bg-green-800 
+   <div className="bg-green-600 
             rounded-sm  p-2" >
     <FaCheckDouble className="size-6 text-white " />
    </div>

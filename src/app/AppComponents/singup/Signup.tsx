@@ -13,19 +13,19 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
 import Link from "next/link"
-import AppLogo from './../AppLogo';
+import AppLogo from "../AppLogo"
 
 
 
 
-const Signin = () => {
+const page = () => {
  return (
   <div className="w-full max-w-md"
   >
    <AppLogo />
    <Card className="w-full max-w-md py-5">
     <CardHeader className="mb-4">
-     <CardTitle className="text-2xl">Login</CardTitle>
+     <CardTitle className="text-2xl">Sign Up</CardTitle>
      <CardDescription>
       Enter your email below to login to your account
      </CardDescription>
@@ -46,20 +46,24 @@ const Signin = () => {
        <div className="grid gap-2">
         <div className="flex items-center">
          <Label htmlFor="password">Password</Label>
-         <a
-          href="#"
-          className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
-         >
-          Forgot your password?
-         </a>
+        
         </div>
         <Input id="password" type="password" placeholder="Your Password..." required />
-      
+       
        </div>
-         <CardContent className=" flex justify-between items-center text-md">
-         <p className="text-muted-foreground">Don&apos;t have an account?</p>
+       <div className="grid gap-2">
+        <div className="flex items-center">
+         <Label htmlFor="password">Confrim Password</Label>
+        
+        </div>
+        <Input id="password" type="password" placeholder="Your Confirm Password" required />
+       
+       </div>
+
+        <CardContent className=" flex justify-between items-center text-md">
+         <p className="text-muted-foreground">Already have an account?</p>
          <Button variant="link">
-            <Link href={"/sing-up"} >Sign Up</Link>
+            <Link href={"/"} >Sign In</Link>
          </Button>
         </CardContent>
       </div>
@@ -70,7 +74,8 @@ const Signin = () => {
       Login
      </Button>
      <Button variant="outline" className="w-full">
-     Create an account
+          Create an account
+     
      </Button>
     </CardFooter>
    </Card>
@@ -78,4 +83,4 @@ const Signin = () => {
  )
 }
 
-export default Signin
+export default page
