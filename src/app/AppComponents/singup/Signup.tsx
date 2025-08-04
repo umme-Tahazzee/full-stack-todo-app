@@ -14,9 +14,8 @@ import { Label } from "@/components/ui/label"
 
 import Link from "next/link"
 import AppLogo from "../AppLogo"
-
-
-
+import EmailInput from './../EmailInput';
+import Password from './../Password';
 
 const page = () => {
  return (
@@ -34,32 +33,14 @@ const page = () => {
     <CardContent>
      <form>
       <div className="flex flex-col gap-6">
-       <div className="grid gap-2">
-        <Label htmlFor="email">Email</Label>
-        <Input
-         id="email"
-         type="email"
-         placeholder="m@example.com"
-         required
-        />
-       </div>
-       <div className="grid gap-2">
-        <div className="flex items-center">
-         <Label htmlFor="password">Password</Label>
-        
-        </div>
-        <Input id="password" type="password" placeholder="Your Password..." required />
-       
-       </div>
-       <div className="grid gap-2">
-        <div className="flex items-center">
-         <Label htmlFor="password">Confrim Password</Label>
-        
-        </div>
-        <Input id="password" type="password" placeholder="Your Confirm Password" required />
-       
-       </div>
+      
+       <EmailInput/>
 
+        <Password name="Password" label="Your Password...." />
+
+        <Password name="Confirm Password" label="Your Confirm Password" />
+       
+       
         <CardContent className=" flex justify-between items-center text-md">
          <p className="text-muted-foreground">Already have an account?</p>
          <Button variant="link">
@@ -74,8 +55,7 @@ const page = () => {
       Login
      </Button>
      <Button variant="outline" className="w-full">
-          Create an account
-     
+          Create an account 
      </Button>
     </CardFooter>
    </Card>

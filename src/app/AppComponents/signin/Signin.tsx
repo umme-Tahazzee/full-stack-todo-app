@@ -14,6 +14,9 @@ import { Label } from "@/components/ui/label"
 
 import Link from "next/link"
 import AppLogo from './../AppLogo';
+import EmailInput from './../EmailInput';
+import Password from './../Password';
+
 
 
 
@@ -31,31 +34,16 @@ const Signin = () => {
      </CardDescription>
 
     </CardHeader>
-    <CardContent>
+    <CardContent className="grid grid-5 mt-3">
      <form>
       <div className="flex flex-col gap-6">
-       <div className="grid gap-2">
-        <Label htmlFor="email">Email</Label>
-        <Input
-         id="email"
-         type="email"
-         placeholder="m@example.com"
-         required
-        />
-       </div>
-       <div className="grid gap-2">
-        <div className="flex items-center">
-         <Label htmlFor="password">Password</Label>
-         <a
-          href="#"
-          className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
-         >
-          Forgot your password?
-         </a>
-        </div>
-        <Input id="password" type="password" placeholder="Your Password..." required />
-      
-       </div>
+
+       <EmailInput/>
+
+
+       <Password name="Password" label="Forgot your password?" />
+
+
          <CardContent className=" flex justify-between items-center text-md">
          <p className="text-muted-foreground">Don&apos;t have an account?</p>
          <Button variant="link">
@@ -64,6 +52,8 @@ const Signin = () => {
         </CardContent>
       </div>
      </form>
+
+
     </CardContent>
     <CardFooter className="flex-col gap-2">
      <Button type="submit" className="w-full  bg-green-600 text-white">
